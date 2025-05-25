@@ -1,0 +1,36 @@
+id: OSV-2020-1807
+summary: UNKNOWN READ in __libcpp_memchr
+details: |
+  OSS-Fuzz report: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=25711
+
+  ```
+  Crash type: UNKNOWN READ
+  Crash state:
+  __libcpp_memchr
+  memchr
+  pcpp::cross_platform_memmem
+  ```
+modified: '2025-05-03T14:07:57.418077Z'
+published: '2020-09-18T00:00:38.027965Z'
+references:
+- type: REPORT
+  url: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=25711
+affected:
+- package:
+    name: pcapplusplus
+    ecosystem: OSS-Fuzz
+  ranges:
+  - type: GIT
+    repo: https://github.com/seladb/PcapPlusPlus
+    events:
+    - introduced: fbc52d37c6a7e8cc75e4950d2621cbd907c6cf8a
+  versions:
+  - v21.05
+  - v21.11
+  - v22.05
+  - v22.11
+  - v23.09
+  - v24.09
+  - v25.05-beta
+  ecosystem_specific:
+    severity: MEDIUM

@@ -1,0 +1,33 @@
+id: OSV-2023-1150
+summary: Heap-buffer-overflow in pcpp::computeChecksum
+details: |
+  OSS-Fuzz report: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=64122
+
+  ```
+  Crash type: Heap-buffer-overflow READ 2
+  Crash state:
+  pcpp::computeChecksum
+  pcpp::IPv4Layer::computeCalculateFields
+  pcpp::Packet::computeCalculateFields
+  ```
+modified: '2025-05-03T14:13:21.836489Z'
+published: '2023-11-13T13:01:45.923889Z'
+references:
+- type: REPORT
+  url: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=64122
+affected:
+- package:
+    name: pcapplusplus
+    ecosystem: OSS-Fuzz
+    purl: pkg:generic/pcapplusplus
+  ranges:
+  - type: GIT
+    repo: https://github.com/seladb/PcapPlusPlus
+    events:
+    - introduced: 6a67cab6914074841ed81116ac72219ca070a44d
+  versions:
+  - v24.09
+  - v25.05-beta
+  ecosystem_specific:
+    severity: MEDIUM
+schema_version: 1.6.0
