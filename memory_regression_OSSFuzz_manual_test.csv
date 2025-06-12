@@ -1,0 +1,21 @@
+repo,fix0,bug0-oss,bug0_type,fix1,bug1-oss,bug1_type,comment,aflchurn,aflchurn_poc
+mruby,abcad36bae43f2c7cb8c2b1753dc94ab4cf25366,66426,Heap-buffer-overflow,9c840a68e212fb54136b67711daff331435c1ce7,66689,Heap-buffer-overflow,"bug0 required two commits to fix(fix0.0 and fix0.1), and fix0.0 is an incomplete fix and actually introduced bug1",no,yes
+mruby,2de602b8696bc21e4cbc2c6e08e2fae27b1ad79b,57495,Heap-use-after-free,93648fc954c0133acc6e89860ba49f78ca60460f,57672,Heap-use-after-free,"fix0 actually introduced bug1",no,no
+mruby,8d1192f8a28034b1931a41e8c55cd86715101d0c,56991,Heap-use-after-free,b47c8b738ae3e400ec02269fae9857222218e9d5,58723,Heap-use-after-free,"",no,no
+libavc,28727baf58aa7c8983769aff1ceecb3121a26ee6,65031,Heap-buffer-overflow,b0117e32b9555e7069c2aef571d921bff22f502f,68807,Heap-buffer-overflow,"",not compilable
+libavc,5fabd43f6af6c5f432c543b8a84e690dfa31a3b2,56210,Heap-buffer-overflow,c0ca3b2979a6f0999c57549986f99334666e8ef7,56386,Heap-buffer-overflow,"",not compilable
+espeak-ng,26a675543c63832e37ec780a6c30e49707df1db4,34718,Global-buffer-overflow,7f1222c6ad6a3652be35afbbc980a382076ff0a9,59636,Stack-buffer-overflow,"",yes,yes
+espeak-ng,7b9c99cec7b0c517049d39cbbee610c3a8407fa4,41437,Stack-buffer-overflow,null,48470,Stack-buffer-overflow,"after fix0, bug0 poc is not producable but bug1 poc can still trigger overflow, so this is a incomplete fix",yes,yes
+c-blosc2,4a727370b1c2e9746434c00bf2236db86c31ea5c,33264,Heap-buffer-overflow,7f4574f51ad7db56fc13de89e13e7893b1a82189,41111,Heap-buffer-overflow,"",yes,yes
+c-blosc2,5a222cc79dc67ce01477da3a3ee10edf1076c655,30761,Segv on unknown address,969fb4cbb617801876fb5ddefc73778935ff1a56,30974,Segv on unknown address,"",yes,yes
+c-blosc2,c473b21cff5e1a459b4467f18bf7414114f848fd,29369,Heap-buffer-overflow,98bb9e682481b934f65db1bbd73bc2c3a41f2931,29816,Heap-buffer-overflow,"",yes,yes
+hunspell,f3f90ae7301595761d3445097ce111ffd5220e2d,52397,Stack-buffer-overflow,749556fc08fed3801c15f27aed70e2c8ee83e3d8,52430,Heap-buffer-overflow,"",no,not_runable
+md4c,62b60979f6a281b2b3cf883abc84299431fe2f76,43587,Heap-buffer-overflow,null,44446,Heap-buffer-overflow,"",no,no
+libexif,22799320cc1187868d9a572661d12f0c3f9939b5,37211,Heap-buffer-overflow,d61e9aaddf4f8af5aecea4935f8feb59f42141c1,37334,UNKNOWN READ,"",no,no
+openexr,e598a72aa0166bfab8947eb691ba473a54bfed06,41625,Heap-buffer-overflow,b2083136bbcccf662a97f1547be32b074b8a1511,43763,Heap-buffer-overflow,"",no,no
+openexr,666e2064d10445c501d48544d2d4566c304015c7,39601,Heap-buffer-overflow,b2083136bbcccf662a97f1547be32b074b8a1511,39616,Heap-buffer-overflow,"",no,no
+jbig2dec,ce3e3aa738f1f5102fea63dfb9de15fea555c559,20358,Heap-buffer-overflow,743d799bfd9014f9ef638634656fea21390d1444,20493,Use-of-uninitialized-value,"",no,yes
+
+
+
+openexr,672c77d7c923402f549371e08b39ece4552cbb85,46432,Heap-buffer-overflow,7629dad94ac310a285099f488618cbebc5eb9a85,47483,Heap-buffer-overflow,"the second poc can also crash before the inproper fix",
